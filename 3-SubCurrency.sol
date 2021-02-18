@@ -15,7 +15,7 @@ contract SubCurrency {
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address (this function can only be called by the contract creator)
+    // Sends an amount of newly created coins to an address (this function can only be called by the contract creator) 
     function mint(address receiver, uint amount) public {
         require(msg.sender == minter);
         require(amount < 1e60);
